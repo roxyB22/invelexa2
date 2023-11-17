@@ -1,0 +1,107 @@
+*{
+/*así se formatea el documento general*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: roboto, helvetica, verdana;
+    }
+/*estilos de la barra superior*/
+.language{
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    background-color: #d4cacdff;
+    text-align: right;
+}
+/*estilos de la bara logo-redes*/
+.flex-top-navbar{
+    background-color: #bb2649ff;
+    padding: 1rem 1.5rem;
+    display: flex;
+}
+.contact-us{
+    padding-left: 38rem;
+}
+.social-media{
+    list-style: none;
+    flex-direction: row-reverse;
+}
+.social-media li{
+    padding-right: 0;
+    margin: 0.5rem;
+}
+.icons{
+    background-color: #bb2649;
+    float:left;
+}
+.button-slide{   
+    color: #d4cacd; 
+    background-color: #bb2649;
+    border: 2px solid #d4cacd;
+    border-radius: 0.8rem;
+    padding: 1rem 3rem;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #d4cacd;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+  .slide-right:hover {
+    box-shadow: inset 400px 0 0 0 #d4cacd;
+    color: #bb2649;
+  }
+/*banner imagen-texto*/
+.banner{
+    background-color: #d4cacd;
+    background-image: url(../img/index\ image.jpg);
+    background-repeat: no-repeat;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.bannerText{
+    text-align: center;
+    padding: 4rem;   
+    color: #f6f1ee;
+    text-shadow: 2px 2px 4px #080808; 
+}
+.bannerText h1, .bannerText h3{
+    text-align: center;
+    padding: 0.5rem 7rem;
+}
+ 
+.bannerItems{
+   display: flex;
+   justify-content: center;
+   list-style: none;    
+}
+.bannerMedals{
+    padding-bottom: 2rem;
+    text-shadow: 2px 2px 4px #080808;
+}
+.bannerItems li{
+    display: inline-block;
+    padding: 1rem 8rem;
+    text-align: center;
+    color: #f6f1ee;
+}
+.medalsText h3{
+    padding-top: 1rem;
+}
+.medalsText h4{
+    padding-top: 0.5rem;
+}
+
+.author{
+    text-align: right;
+    padding-right: 5rem;
+    padding-top: 0.2rem; 
+    background-color: #bb2649;   
+}
+    
+    
+    
+     
+  

@@ -1,0 +1,61 @@
+.login-form{
+    padding-top: 1.7rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+
+  }
+  .login-form h3{
+    color: #f6f1ee;
+    text-shadow: 2px 2px 4px #080808;
+    padding-top: 1rem;
+    padding-bottom: .05rem;
+  }
+  .login-input{
+    max-width:400px;
+    width: 80%;
+    line-height:3em;
+    margin:1em 2em;
+    border-radius:5px;
+    border:2px solid #f2f2f2;
+    outline:none;
+    padding-left:10px;
+  }
+  .login-form h4{
+    color: #f6f1ee;
+    text-shadow: 2px 2px 4px #080808;  
+  }
+  .registrer-list{
+    display: flex;
+    flex-direction: row;
+    padding-left: 18rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+  .registrer-list li{
+    padding-left: 11rem; 
+    text-decoration: none; 
+  }
+  .registrer-text{
+    list-style: none;
+  }
+  #back-text{
+    padding-left: 22rem;
+  }
+  #modalContrasenia{
+    width: 60%; /*hace que el modal ocupe el 80% del contenedor principal*/
+    max-width: 1200px; /*es el ancho máximo y sirve para que no se deforme la imagen si el dispositivo es muy grande*/
+    margin: 2rem auto; /*agrega un espacio arriba y abajo y centra el modal horizontalmente*/
+    padding: 2rem; /*agrega espacio interno en los bordes del modal*/
+    background-color: #f6f1ee; /*color de fondo del modal*/
+    border-radius: 8px; /*redondea los bordes del modal*/ 
+    border-color: #bb2649; 
+
+  }
+  .modalContraseniaClose-Btn{
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border-color: #bb2649;
+    background-color: #bb2649;
+    color: #f6f1ee;
+
+  }
