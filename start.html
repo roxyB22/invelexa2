@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Invelexa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invelexa: sistema de control de inventario para micropymes y emprendedores">
+    <meta name="keywords" content="Invelexa, inventario, control de inventario, stock, control de stock, micropymes, emprendedor, emprendimient, Roxy-B, RoxyB, Roxy">
+    <meta name="author" content="Roxy B">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--favicon-->
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon.ico">    
+<!--CSS only-->
+    <link rel="stylesheet" href="../assets/CSS/index-styles.css">
+    <link rel="stylesheet" href="../assets/CSS/login-styles.css"> 
+    <link rel="stylesheet" href="../assets/CSS/start-styles.css">   
+</head>
+
+<body>
+<!--ACÁ EMPIEZA LA CABECERA COMÚN DE TODAS LAS PÁGINAS-->
+<header>
+    <div class="language">   
+        <span><img src="../assets/img/bandera ES.jpg" alt="selector lenguaje español"  width="38rem"></span>
+    </div>
+<!--barra superior "redes"-->
+    <nav class="flex-top-navbar">
+<!--logo invelexa-->
+        <div class="invelexa-logo">
+            <a href="../index.html"><img src="../assets/img/invelexa-logo color.png" alt="Invelexa Logo" width="300rem"></a>
+        </div>
+<!--botones redes y login-->        
+        <div class="contact-us">
+            <ul class="social-media">                
+                <li class="icons"><a href=""><img src="../assets/img/facebook logo.png" alt="link facebook"    width="50rem"></a></li>
+                <li class="icons"><a href=""><img src="../assets/img/linkedin logo.png" alt="link linkedin" width="50rem"></a></li>
+                <li class="icons"><a href=""><img src="../assets/img/instagram.png" alt="link instagram" width="50rem"></a></li>
+                <li class="icons"><a href="./login.html"><button  class="button-slide slide-right" type="button"><strong>Login</strong></button></a></li>
+            </ul>   
+        </div>
+    </nav>
+</header>
+<!--acá va la imagen principal y los formularios para el login-->
+<section class="banner">
+    <navbar class="verticalNavbar">
+        <ul class="startNavbar">
+            <li class="navItems"><a onclick="window.modalProducto.showModal();"><strong>Productos</strong></a></li>
+            <li class="navItems"><strong>Clientes</strong></li>
+            <li class="navItems"><strong>Proveedores</strong></li>
+            <li class="navItems"><strong> Movimientos</strong></li>
+            <li class="navItems"><strong>Reportes</strong></li>
+        </ul>
+    </navbar>
+    <div class="contenidoCentral">
+
+<!--ACÁ podría poner una frase motivadora-->
+    </div>
+</section>
+ 
+ 
+<!--ACÁ EMPIEZAN LOS MODALES-->  
+<dialog id="modalProducto">
+    <div class="modalProductoContainer">
+        <div class="modalProductoClose-Btn">    
+            <button id="closeBtn"  onclick="window.modalProducto.close();"><strong>X</strong></button>
+        </div>   
+        <div class="seeker">
+                <input type="text" class="seekerTextBox" placeholder="Nombre o código de barras...">
+                <button type="submit" class="seekerButton" onclick="window.modalSearch.showModal();">
+                    <img class="mag-glass" src="../assets/img/icono lupa.png" alt="">
+                </button>       
+        </div>
+        <div class="Producto-Form">
+            <form action="">
+            <div>
+                <label for="nombre" id="nombre-label">Nombre</label>           
+                <input type="text" class="nombre-input" name="nombre" required>
+                <label for="apellido" id="apellido-label">Apellido</label>           
+                <input type="text" class="apellid-input" name="apellido" required>
+            </div>
+            <div>
+                <label for="descripcion" id="descripcion-label">Descripción</label>           
+                <textarea class="descripcion-textarea" name="descripcion" required cols="100" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="vencimiento" id="vencimiento-label">Vencimiento</label>           
+                <input type="text" class="vencimiento-input" name="vencimiento" required>
+                <label for="codBarras" id="codBarras-label">Cod.Barras</label>           
+                <input type="text" class="codBarras-input" name="codBarras" required>
+            </div>
+            <div>
+                <label for="cantidad" id="cantidad-label">Cantidad</label>           
+                <input type="number" class="cantidad-input" name="cantidad" required>
+                <label for="fechaActualizacion" id="fechaActualizacion-label">Fecha de Actualizacion</label>           
+                <input type="date" class="fechaActualizacion-input" name="fechaActualizacion" required>
+                <label for="precio" id="precio-label">Precio $</label>           
+                <input type="number" class="precio-input" name="precio" required>
+            </div>
+            </form>
+        </div>
+    </div>
+         <div>
+            <button class="formProductoEnviar-Btn">Enviar</button>
+        </div>                  
+      
+</dialog>  
+
+<dialog id="modalRegistrarme">
+    <div class="modalRegistrarmeContainer">
+        <h3>¿Olvidaste tu Contraseña?</h3>
+        <h4>Ingresá el e-mail con el que te registraste y luego presioná el botón "Enviar". Se generará una nueva contraseña que será enviada al mail ingresado.</h4>
+        <form action="">            
+            <input type="text" class="login-input" name="usuario" required>
+            <label for="email" id="email-label"></label>
+            <button class="modalContraseniaClose-Btn">Enviar</button>
+        </form>
+        <div class="modalContraseniaClose-Btn">    
+            <button onclick="window.modalRegistrarme.close();"><strong>X</strong></button>
+        </div>               
+    </div>  
+</dialog> 
+ 
+ 
+    <!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
+<footer>
+    <div class="author"><cite>- Created by Roxy-B - 2024 -</cite></div>
+
+</footer>
+    
+</body>
+</HTML>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Invelexa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invelexa: sistema de control de inventario para micropymes y emprendedores">
+    <meta name="keywords" content="Invelexa, inventario, control de inventario, stock, control de stock, micropymes, emprendedor, emprendimient, Roxy-B, RoxyB, Roxy">
+    <meta name="author" content="Roxy B">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--favicon-->
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon.ico">    
+<!--CSS only-->
+    <link rel="stylesheet" href="../assets/CSS/index-styles.css">
+    <link rel="stylesheet" href="../assets/CSS/login-styles.css">    
+</head>
+
+<body>
+<!--ACÁ EMPIEZA LA CABECERA COMÚN DE TODAS LAS PÁGINAS-->
+<header>
+    <div class="language">   
+        <span><img src="../assets/img/bandera ES.jpg" alt="selector lenguaje español"  width="38rem"></span>
+    </div>
+<!--barra superior "redes"-->
+    <nav class="flex-top-navbar">
+<!--logo invelexa-->
+        <div class="invelexa-logo">
+            <a href="../index.html"><img src="../assets/img/invelexa-logo color.png" alt="Invelexa Logo" width="300rem"></a>
+        </div>
+<!--botones redes y login-->        
+        <div class="contact-us">
+            <ul class="social-media">                
+                <li class="icons"><a href=""><img src="../assets/img/facebook logo.png" alt="link facebook"    width="50rem"></a></li>
+                <li class="icons"><a href=""><img src="../assets/img/linkedin logo.png" alt="link linkedin" width="50rem"></a></li>
+                <li class="icons"><a href=""><img src="../assets/img/instagram.png" alt="link instagram" width="50rem"></a></li>
+                <li class="icons"><a href="./login.html"><button  class="button-slide slide-right" type="button"><strong>Login</strong></button></a></li>
+            </ul>   
+        </div>
+    </nav>
+</header>
+<!--acá va la imagen principal y los formularios para el login-->
+<section class="banner">
+    <div class="login-form">
+        <form action="">
+            <h3>E-mail</h3>
+                <br>
+            <label for="email" id="email-label"></label>
+            <input type="text" class="login-input" name="usuario" required>
+                <br>
+            <h3>Contraseña</h3>
+                <br>
+            <label for="password" id="password-label"></label>
+            <input type="password" class="login-input" name="usuario" required>
+        </form>
+        <div>
+            <br>
+            <a href="./start.html"><button  class="button-slide slide-right" type="button"><strong>Login</strong></button></a>
+        </div>
+        <div class="registrer">
+            <ul class="registrer-list">
+    <!--acá falta colocar los links de <a> para los formularios de registro y olvidé la contraseña-->
+                <li class="registrer-text"><a onclick="window.modalContrasenia.showModal();"><h4><i>Olvidé mi contraseña</i></h4></a></li>
+                <li class="registrer-text"><a onclick="window.modalRegistrarme.showModal()"><h4><i>Registrarme</i></h4></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+ 
+<!--ACÁ EMPIEZAN LOS MODALES-->  
+<dialog id="modalContrasenia">
+    <div class="modalContraseniaContainer">
+        <h3>¿Olvidaste tu Contraseña?</h3>
+        <h4>Ingresá el e-mail con el que te registraste y luego presioná el botón "Enviar". Se generará una nueva contraseña que será enviada al mail ingresado.</h4>
+        <form action="">            
+            <input type="text" class="login-input" name="usuario" required>
+            <label for="email" id="email-label"></label>
+            <button class="modalContraseniaClose-Btn">Enviar</button>
+        </form>
+        <div class="modalContraseniaClose-Btn">    
+            <button onclick="window.modalContrasenia.close();"><strong>X</strong></button>
+        </div>               
+    </div>  
+</dialog>  
+
+<dialog id="modalRegistrarme">
+    <div class="modalRegistrarmeContainer">
+        <h3>¿Olvidaste tu Contraseña?</h3>
+        <h4>Ingresá el e-mail con el que te registraste y luego presioná el botón "Enviar". Se generará una nueva contraseña que será enviada al mail ingresado.</h4>
+        <form action="">            
+            <input type="text" class="login-input" name="usuario" required>
+            <label for="email" id="email-label"></label>
+            <button class="modalContraseniaClose-Btn">Enviar</button>
+        </form>
+        <div class="modalContraseniaClose-Btn">    
+            <button onclick="window.modalRegistrarme.close();"><strong>X</strong></button>
+        </div>               
+    </div>  
+</dialog> 
+ 
+ 
+    <!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
+<footer>
+    <div class="author"><cite>- Created by Roxy-B - 2024 -</cite></div>
+
+</footer>
+    
+</body>
+</HTML>
