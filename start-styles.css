@@ -17,11 +17,10 @@
 }
 #modalProducto{
     width: 70%;
-    margin-left: 14.1rem;
-    margin-top:9.55rem;
-    margin-right: 0;
+    margin: 9.55rem 0 2rem 18.2rem ;
     padding-left: 1rem;
-    padding-right: 1rem;    
+    padding-right: 1rem; 
+    padding-bottom: 0.9rem;   
     border-color: #d4cacd;
     background-color: #d4cacd;
     justify-content: center;
@@ -61,11 +60,75 @@
     text-align: center;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1rem;
 }
 .mag-glass{
     width: 1rem;
 }
-.producto-Form{
-    padding: 3rem 2rem;
+.Producto-Form{
+    padding: 0.5rem 2rem 1rem 2rem;  
 }
+.startRow-Form{
+    width: 100%;
+    padding: 1rem 0 1rem 0.5rem;   
+}
+.startRow-label{
+    padding-right: 1rem;   
+}
+.start-input{
+    border: 0.1rem solid #bb2649;
+    height: 1rem;
+    border: 0.1rem solid #bb2649;
+    margin-left: 1rem;
+    padding: 1rem;
+    width: 35%;
+    border-radius: 5px;
+}
+.number{
+    width: 7rem;
+}
+#apellido-label{
+    padding-left: 5rem;
+}
+.descripcion{
+    width: 84%;
+}
+.date{
+    width: 9rem;
+}
+.codigo-label{
+    padding-left: 3rem;
+}
+.codigo-input{
+    width: 45.9%;
+}
+.fecha{
+    padding-left: 2rem;
+}
+.precio{
+    padding-left: 1rem;
+}
+.producto-Botones{
+    padding: 1rem 2rem;
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+.producto-Botones li{
+    flex-grow: 1;
+    text-align: center;
+}
+.formProducto-Btn{    
+    border: 1px solid #bb2649;
+    background: #bb2649;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 0.5rem 1rem;   
+}
+.Nuevo{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }

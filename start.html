@@ -45,8 +45,8 @@
     <navbar class="verticalNavbar">
         <ul class="startNavbar">
             <li class="navItems"><a onclick="window.modalProducto.showModal();"><strong>Productos</strong></a></li>
-            <li class="navItems"><strong>Clientes</strong></li>
-            <li class="navItems"><strong>Proveedores</strong></li>
+            <li class="navItems"><strong>Clientes/Proveedores</strong></li>
+            <li class="navItems"><strong>Lista de Tareas</strong></li>
             <li class="navItems"><strong> Movimientos</strong></li>
             <li class="navItems"><strong>Reportes</strong></li>
         </ul>
@@ -72,53 +72,44 @@
         </div>
         <div class="Producto-Form">
             <form action="">
-            <div>
-                <label for="nombre" id="nombre-label">Nombre</label>           
-                <input type="text" class="nombre-input" name="nombre" required>
-                <label for="apellido" id="apellido-label">Apellido</label>           
-                <input type="text" class="apellid-input" name="apellido" required>
-            </div>
-            <div>
-                <label for="descripcion" id="descripcion-label">Descripción</label>           
-                <textarea class="descripcion-textarea" name="descripcion" required cols="100" rows="5"></textarea>
-            </div>
-            <div>
-                <label for="vencimiento" id="vencimiento-label">Vencimiento</label>           
-                <input type="text" class="vencimiento-input" name="vencimiento" required>
-                <label for="codBarras" id="codBarras-label">Cod.Barras</label>           
-                <input type="text" class="codBarras-input" name="codBarras" required>
-            </div>
-            <div>
-                <label for="cantidad" id="cantidad-label">Cantidad</label>           
-                <input type="number" class="cantidad-input" name="cantidad" required>
-                <label for="fechaActualizacion" id="fechaActualizacion-label">Fecha de Actualizacion</label>           
-                <input type="date" class="fechaActualizacion-input" name="fechaActualizacion" required>
-                <label for="precio" id="precio-label">Precio $</label>           
-                <input type="number" class="precio-input" name="precio" required>
-            </div>
+                <div class="startRow-Form">
+                    <label for="nombre" id="nombre-label">Nombre</label>           
+                    <input type="text" class="start-input" name="nombre" required>
+                    <label for="apellido" id="apellido-label">Apellido</label>           
+                    <input type="text" class="start-input" name="apellido" required>
+                </div>
+                <div class="startRow-Form">
+                    <label for="descripcion" class="startRow-label">Descripción</label>           
+                    <input class="start-input descripcion" name="descripcion" required></input>
+                </div>
+                <div class="startRow-Form">
+                    <label for="vencimiento" class="startRow-label">Vencimiento</label>           
+                    <input type="date" class="start-input date" name="vencimiento" required>
+                    <label for="codBarras" class="startRow-label codigo-label">Cod.Barras</label>           
+                    <input type="text" class="start-input codigo-input" name="codBarras" required>
+                </div>
+                <div class="startRow-Form">
+                    <label for="cantidad" class="startRow-label">Cantidad</label>           
+                    <input type="number" class="start-input number" name="cantidad" required>
+                    <label for="fechaActualizacion" class="startRow-label fecha">Fecha de Actualizacion</label>           
+                    <input type="date" class="start-input date" name="fechaActualizacion" required>
+                    <label for="precio" class="startRow-label precio">Precio $</label>           
+                    <input type="number" class="start-input number" name="precio" required>
+                </div>
             </form>
         </div>
     </div>
-         <div>
-            <button class="formProductoEnviar-Btn">Enviar</button>
-        </div>                  
-      
+    <div class="productoBtn-navbar">
+        <ul class="producto-Botones ">
+            <li><button class="formProducto-Btn Nuevo"><strong>Nuevo</strong></button></li>
+            <li><button class="formProducto-Btn"><strong>Modificar</strong></button></li>
+            <li><button class="formProducto-Btn"><strong>Guardar</strong></button></li>
+            <li><button class="formProducto-Btn"><strong>Eliminar</strong></button></li>
+        </ul>    
+    </div>                        
 </dialog>  
 
-<dialog id="modalRegistrarme">
-    <div class="modalRegistrarmeContainer">
-        <h3>¿Olvidaste tu Contraseña?</h3>
-        <h4>Ingresá el e-mail con el que te registraste y luego presioná el botón "Enviar". Se generará una nueva contraseña que será enviada al mail ingresado.</h4>
-        <form action="">            
-            <input type="text" class="login-input" name="usuario" required>
-            <label for="email" id="email-label"></label>
-            <button class="modalContraseniaClose-Btn">Enviar</button>
-        </form>
-        <div class="modalContraseniaClose-Btn">    
-            <button onclick="window.modalRegistrarme.close();"><strong>X</strong></button>
-        </div>               
-    </div>  
-</dialog> 
+
  
  
     <!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
