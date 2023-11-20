@@ -15,7 +15,9 @@
     color: #fefeff;
     opacity: 1;
 }
-#modalProducto{
+/*Acá empiezan los modales*/
+/*estos son los estilos comunes a todos los modales*/
+.start-modal{
     width: 70%;
     margin: 9.55rem 0 2rem 18.2rem ;
     padding-left: 1rem;
@@ -25,9 +27,8 @@
     background-color: #d4cacd;
     justify-content: center;
 }
-.modalProductoClose-Btn{
-    padding-left: 57rem;
-    
+.modalStartClose-Btn{
+    padding-left: 57rem;   
 }
 #closeBtn{
     margin-top: 0.5rem;
@@ -36,14 +37,14 @@
     border-color: #bb2649;
     color: #bb2649;  
 }
-.seeker {
+.seeker{
     width: 100%;
     padding: 1rem 2rem;
     position: relative;
     display: flex;
     margin: 0 ;
 }  
-.seekerTextBox {
+.seekerTextBox{
     width: 100%;
     border: 0.1rem solid #bb2649;
     border-right: none;
@@ -53,7 +54,7 @@
     outline: none;    
     font-size: 1rem;
 }  
-.seekerButton {
+.seekerButton{
     width: 2rem; 
     border: 1px solid #bb2649;
     background: #bb2649;
@@ -65,7 +66,7 @@
 .mag-glass{
     width: 1rem;
 }
-.Producto-Form{
+.Start-Form{
     padding: 0.5rem 2rem 1rem 2rem;  
 }
 .startRow-Form{
@@ -84,11 +85,32 @@
     width: 35%;
     border-radius: 5px;
 }
+.start-Botones{
+    padding: 1rem 2rem;
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+.start-Botones li{
+    flex-grow: 1;
+    text-align: center;
+}
+.startForm-Btn{    
+    border: 1px solid #bb2649;
+    background: #bb2649;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 0.5rem 1rem;   
+}
+/*estos son los estilos del modal producto*/
 .number{
     width: 7rem;
 }
-#apellido-label{
-    padding-left: 5rem;
+#sku-label{
+    padding-left: 1rem;
 }
 .descripcion{
     width: 84%;
@@ -107,28 +129,46 @@
 }
 .precio{
     padding-left: 1rem;
-}
-.producto-Botones{
-    padding: 1rem 2rem;
-    width: 100%;
-    list-style: none;
-    display: flex;
-}
-.producto-Botones li{
-    flex-grow: 1;
-    text-align: center;
-}
-.formProducto-Btn{    
-    border: 1px solid #bb2649;
-    background: #bb2649;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #ffffff;
-    padding: 0.5rem 1rem;   
+    padding-right: 1rem;
 }
 .Nuevo{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+  /*estos son los estilos del modal cliente/proveedor*/
+  #nombre-label{
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+  }
+  #nombre-input{
+    width: 8rem;
+  }
+  #apellido-label{
+    padding-right: 0.5rem;
+    padding-left: 2rem;
+  }
+  #apellido-input{
+    width: 19.5rem;
+  }
+  #dni-Cuit{
+    padding-left: 1.5rem;
+  }
+  #direccion-input{
+    width: 85.3%;
+  }
+  #telefono-input{
+    margin-left: 1.2rem;
+    width: 7rem;
+  }
+  #email-label{
+    padding-left: .5rem;
+    padding-right: 0.2rem; 
+  }
+  #cumpleanios-label{
+    padding-left: .3rem;
+    padding-right: 0.5rem;
+  }
+  #cumpleanios-input{
+    width: 8rem;
+    margin-left: 0;
   }

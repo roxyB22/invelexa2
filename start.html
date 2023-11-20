@@ -45,7 +45,7 @@
     <navbar class="verticalNavbar">
         <ul class="startNavbar">
             <li class="navItems"><a onclick="window.modalProducto.showModal();"><strong>Productos</strong></a></li>
-            <li class="navItems"><strong>Clientes/Proveedores</strong></li>
+            <li class="navItems"><a onclick="window.modalClienteProveedor.showModal();"><strong>Clientes/Proveedores</strong></a></li>
             <li class="navItems"><strong>Lista de Tareas</strong></li>
             <li class="navItems"><strong> Movimientos</strong></li>
             <li class="navItems"><strong>Reportes</strong></li>
@@ -58,10 +58,11 @@
 </section>
  
  
-<!--ACÁ EMPIEZAN LOS MODALES-->  
-<dialog id="modalProducto">
-    <div class="modalProductoContainer">
-        <div class="modalProductoClose-Btn">    
+<!--ACÁ EMPIEZAN LOS MODALES--> 
+ <!--ModalProducto--> 
+<dialog id="modalProducto" class="start-modal">
+    <div class="modalStartContainer">
+        <div class="modalStartClose-Btn">    
             <button id="closeBtn"  onclick="window.modalProducto.close();"><strong>X</strong></button>
         </div>   
         <div class="seeker">
@@ -70,13 +71,13 @@
                     <img class="mag-glass" src="../assets/img/icono lupa.png" alt="">
                 </button>       
         </div>
-        <div class="Producto-Form">
+        <div class="Start-Form">
             <form action="">
                 <div class="startRow-Form">
-                    <label for="nombre" id="nombre-label">Nombre</label>           
-                    <input type="text" class="start-input" name="nombre" required>
-                    <label for="apellido" id="apellido-label">Apellido</label>           
-                    <input type="text" class="start-input" name="apellido" required>
+                    <label for="nombreProducto" id="nombreProducto-label">Nombre del Producto</label>           
+                    <input type="text" class="start-input" name="nombreProducto" required>
+                    <label for="Sku" id="sku-label">SKU</label>           
+                    <input type="number" class="start-input" name="sku" >
                 </div>
                 <div class="startRow-Form">
                     <label for="descripcion" class="startRow-label">Descripción</label>           
@@ -94,25 +95,80 @@
                     <label for="fechaActualizacion" class="startRow-label fecha">Fecha de Actualizacion</label>           
                     <input type="date" class="start-input date" name="fechaActualizacion" required>
                     <label for="precio" class="startRow-label precio">Precio $</label>           
-                    <input type="number" class="start-input number" name="precio" required>
+                    <input type="text" class="start-input number" name="precio" required>
                 </div>
             </form>
         </div>
     </div>
-    <div class="productoBtn-navbar">
-        <ul class="producto-Botones ">
-            <li><button class="formProducto-Btn Nuevo"><strong>Nuevo</strong></button></li>
-            <li><button class="formProducto-Btn"><strong>Modificar</strong></button></li>
-            <li><button class="formProducto-Btn"><strong>Guardar</strong></button></li>
-            <li><button class="formProducto-Btn"><strong>Eliminar</strong></button></li>
+    <div class="startBtn-navbar">
+        <ul class="start-Botones ">
+            <li><button class="startForm-Btn Nuevo"><strong>Nuevo</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Modificar</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Guardar</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Eliminar</strong></button></li>
         </ul>    
     </div>                        
 </dialog>  
 
+<!--ModalClienteProveedor--> 
+<dialog id="modalClienteProveedor" class="start-modal">
+    <div class="modalStartContainer">
+        <div class="modalStartClose-Btn">    
+            <button id="closeBtn"  onclick="window.modalClienteProveedor.close();"><strong>X</strong></button>
+        </div>   
+        <div class="seeker">
+                <input type="text" class="seekerTextBox" placeholder="Nombre o código de barras...">
+                <button type="submit" class="seekerButton" onclick="window.modalSearch.showModal();">
+                    <img class="mag-glass" src="../assets/img/icono lupa.png" alt="">
+                </button>       
+        </div>
+        <div class="Start-Form">
+            <form action="">
+                <div class="startRow-Form">
+                    <!--selector cliente/proveedor-->
+                    <label><input type="radio" name="tipo" value="cliente" checked>Cliente</label>
+                    <label><input type="radio" name="tipo" value="proveedor">Proveedor</label>
+
+                    <label for="nombre" id="nombre-label">Nombre</label>           
+                    <input type="text" class="start-input" id="nombre-input" name="nombre" required>
+                    <label for="apellido" id="apellido-label">Apellido</label>           
+                    <input type="text" class="start-input" id="apellido-input" name="apellido" required>
+                </div>
+                <div class="startRow-Form">
+                    <label for="empresa" class="startRow-label">Empresa</label>           
+                    <input type="text" class="start-input" name="empresa">
+                    <label for="dniCuit" class="startRow-label" id="dni-Cuit">DNI/CUIT</label>           
+                    <input type="text" class="start-input " name="dniCuit" required>
+                </div>
+                <div class="startRow-Form">
+                    <label for="direccion" class="startRow-label">Dirección</label>           
+                    <input type="text" class="start-input" id="direccion-input" name="direccion"></input>
+                </div>
+                <div class="startRow-Form">
+                    <label for="telefono" class="startRow-label" >Teléfono</label>           
+                    <input type="tel" class="start-input" id="telefono-input" name="telefono" required>
+                    <label for="email" class="startRow-label" id="email-label">Email</label>           
+                    <input type="email" class="start-input" name="email">
+                    <label for="cumpleanios" class="startRow-label" id="cumpleanios-label">Cumpleaños</label>           
+                    <input type="date" class="start-input" id="cumpleanios-input" name="cumpleanios">
+                </div>
+            </form>
+        </div>
+    </div>
+<!--Estos son los botones comunes a todos los modales-->   
+    <div class="startBtn-navbar">
+        <ul class="start-Botones ">
+            <li><button class="startForm-Btn Nuevo"><strong>Nuevo</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Modificar</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Guardar</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Eliminar</strong></button></li>
+        </ul>    
+    </div>                        
+</dialog>  
 
  
  
-    <!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
+<!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
 <footer>
     <div class="author"><cite>- Created by Roxy-B - 2024 -</cite></div>
 
