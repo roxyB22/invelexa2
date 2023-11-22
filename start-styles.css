@@ -106,11 +106,15 @@
     padding: 0.5rem 1rem;   
 }
 /*estos son los estilos del modal producto*/
+
 .number{
     width: 7rem;
 }
 #sku-label{
     padding-left: 1rem;
+}
+.sku-input{
+    width: 28.3%;
 }
 .descripcion{
     width: 84%;
@@ -119,17 +123,22 @@
     width: 9rem;
 }
 .codigo-label{
-    padding-left: 3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 .codigo-input{
-    width: 45.9%;
+    width: 15%;
+}
+.imagen-label{
+    padding-right: 2rem;
+    padding-left: 3rem;   
 }
 .fecha{
     padding-left: 2rem;
 }
 .precio{
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: .8rem;   
 }
 .Nuevo{
     padding-left: 1.5rem;

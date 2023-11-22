@@ -71,13 +71,14 @@
                     <img class="mag-glass" src="../assets/img/icono lupa.png" alt="">
                 </button>       
         </div>
+        
         <div class="Start-Form">
             <form action="">
                 <div class="startRow-Form">
-                    <label for="nombreProducto" id="nombreProducto-label">Nombre del Producto</label>           
-                    <input type="text" class="start-input" name="nombreProducto" required>
-                    <label for="Sku" id="sku-label">SKU</label>           
-                    <input type="number" class="start-input" name="sku" >
+                    <label for="nombreProducto" id="nombreProducto-label">Nombre</label>           
+                    <input type="text" class="start-input" name="nombreProducto" required placeholder="Nombre del Producto">
+                    <label for="productoImagen" class="startRow-label imagen-label">Imagen</label>           
+                    <input type="file" id="imagen-input" name="productoImagen">
                 </div>
                 <div class="startRow-Form">
                     <label for="descripcion" class="startRow-label">Descripción</label>           
@@ -87,7 +88,9 @@
                     <label for="vencimiento" class="startRow-label">Vencimiento</label>           
                     <input type="date" class="start-input date" name="vencimiento" required>
                     <label for="codBarras" class="startRow-label codigo-label">Cod.Barras</label>           
-                    <input type="text" class="start-input codigo-input" name="codBarras" required>
+                    <input type="text" class="start-input codigo-input" name="codBarras" required>       
+                    <label for="Sku" id="sku-label">SKU</label>           
+                    <input type="text" class="start-input sku-input" name="sku" >
                 </div>
                 <div class="startRow-Form">
                     <label for="cantidad" class="startRow-label">Cantidad</label>           
