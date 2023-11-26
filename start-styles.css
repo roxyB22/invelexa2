@@ -6,14 +6,21 @@
    padding-top: .5rem;
    padding-left: 3rem;
    padding-right: 5rem;
-   list-style: disc;
+   list-style: none;
    background-color: #6667ab80; 
+   transition: background-color 0.3s ease;
 }
 .navItems{
     padding-top: 2.2rem;
     padding-bottom: 2.5rem;
     color: #fefeff;
     opacity: 1;
+    cursor: pointer;
+    
+}
+.startNavbar a:hover{
+        background-color: #a3a4c080;
+        padding: 2rem 1rem;
 }
 /*Acá empiezan los modales*/
 /*estos son los estilos comunes a todos los modales*/
@@ -28,7 +35,7 @@
     justify-content: center;
 }
 .modalStartClose-Btn{
-    padding-left: 57rem;   
+    padding-left: 55rem;   
 }
 #closeBtn{
     margin-top: 0.5rem;
@@ -181,3 +188,45 @@
     width: 8rem;
     margin-left: 0;
   }
+  /*estos son los estilos del modal ListaDeTareas*/
+  .scroll{
+    max-height: 73%;
+    overflow-y: auto; /*agrega un scroll si aumenta el tamaño vertical*/
+    overflow-x: hidden;/*oculta el scroll horizontal*/
+  }
+.primerRow{
+    display: flex; /*esto alinea los div en una misma fila*/
+    vertical-align: middle; /*esto alinea los div a la misma altura*/
+    padding-top: .3rem;
+}
+.selectorUrgente{
+    padding-top: .6rem;
+    padding-left: 10rem;
+}
+.selectorUrgente label{
+    padding-left: 2rem;
+}
+.agregarRow input{
+    width: 90%;   
+}
+.agregarRow button{
+    padding-left: 2rem;
+}
+.agregarTarea{
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: 0;
+    vertical-align: middle;
+}
+.tareasRow{
+    padding-top: .2rem;
+}
+.tareasRow input{
+    width: 90%;
+}
+.tareasRow button{
+    padding-left: 2rem;
+}
+.tareas{
+    padding-top: 0;
+} 

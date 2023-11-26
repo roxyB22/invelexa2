@@ -14,7 +14,9 @@
 <!--CSS only-->
     <link rel="stylesheet" href="../assets/CSS/index-styles.css">
     <link rel="stylesheet" href="../assets/CSS/login-styles.css"> 
-    <link rel="stylesheet" href="../assets/CSS/start-styles.css">   
+    <link rel="stylesheet" href="../assets/CSS/start-styles.css"> 
+<!--Script de Fontawesome--> 
+<script src="https://kit.fontawesome.com/5a819552f9.js" crossorigin="anonymous"></script>   
 </head>
 
 <body>
@@ -46,10 +48,10 @@
         <ul class="startNavbar">
             <li class="navItems"><a onclick="window.modalProducto.showModal();"><strong>Productos</strong></a></li>
             <li class="navItems"><a onclick="window.modalClienteProveedor.showModal();"><strong>Clientes/Proveedores</strong></a></li>
-            <li class="navItems"><strong>Lista de Tareas</strong></li>
-            <li class="navItems"><strong> Movimientos</strong></li>
+            <li class="navItems"><a onclick="window.modalListaDeTareas.showModal()"><strong>Lista de Tareas</strong></a></li>
+            <li class="navItems"><a onclick="window.modalMovimientos.showModal()"><strong> Movimientos</strong></a></li>
             <li class="navItems"><strong>Reportes</strong></li>
-        </ul>
+       </ul>
     </navbar>
     <div class="contenidoCentral">
 
@@ -70,14 +72,13 @@
                 <button type="submit" class="seekerButton" onclick="window.modalSearch.showModal();">
                     <img class="mag-glass" src="../assets/img/icono lupa.png" alt="">
                 </button>       
-        </div>
-        
+        </div>        
         <div class="Start-Form">
             <form action="">
                 <div class="startRow-Form">
                     <label for="nombreProducto" id="nombreProducto-label">Nombre</label>           
                     <input type="text" class="start-input" name="nombreProducto" required placeholder="Nombre del Producto">
-                    <label for="productoImagen" class="startRow-label imagen-label">Imagen</label>           
+                    <label for="productoImagen" class="startRow-label imagen-label">Foto</label>           
                     <input type="file" id="imagen-input" name="productoImagen">
                 </div>
                 <div class="startRow-Form">
@@ -103,6 +104,7 @@
             </form>
         </div>
     </div>
+    <!--Estos son los botones comunes a todos los modales-->
     <div class="startBtn-navbar">
         <ul class="start-Botones ">
             <li><button class="startForm-Btn Nuevo"><strong>Nuevo</strong></button></li>
@@ -158,7 +160,7 @@
             </form>
         </div>
     </div>
-<!--Estos son los botones comunes a todos los modales-->   
+    <!--Estos son los botones comunes a todos los modales-->   
     <div class="startBtn-navbar">
         <ul class="start-Botones ">
             <li><button class="startForm-Btn Nuevo"><strong>Nuevo</strong></button></li>
@@ -167,9 +169,145 @@
             <li><button class="startForm-Btn"><strong>Eliminar</strong></button></li>
         </ul>    
     </div>                        
-</dialog>  
+</dialog> 
 
- 
+<!--ModallistaDeTareas--> 
+<dialog id="modalListaDeTareas" class="start-modal scroll">
+    <div class="modalStartContainer">
+        <div class="modalStartClose-Btn">    
+            <button id="closeBtn"  onclick="window.modalListaDeTareas.close();"><strong>X</strong></button>
+        </div>  
+        <div class="start-Form">            
+            <form action="">
+                <div class="startRow-Form primerRow">
+                    <div class="fechaTareas">
+                        <label for="fecha" class="startRow-label">Fecha</label>           
+                        <input type="date" class="start-input date" name="fecha" required> 
+                    </div>
+                    <div class="selectorUrgente">  
+                        <label><input type="radio" name="tipo" value="urgente" checked>Urgente</label>
+                        <label><input type="radio" name="tipo" value="importante">Importante</label>
+                        <label><input type="radio" name="tipo" value="hayTiempo">Hay tiempo</label>
+                    </div>
+                </div>
+                <div class="startRow-Form agregarRow">
+                    <input type="text" class="start-input" name="nuevaTarea"required placeholder="Nueva Tarea">
+                    <button type="submit" class="agregarTarea" name="agregarTarea">
+                        <i class="fa-solid fa-circle-plus" id="iconoSuma" style="color: #bb2649;"></i>
+                    </button>
+                </div>               
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>                
+            </form>           
+        </div>
+    </div>
+    <!--Estos son los botones comunes a todos los modales-->   
+    <div class="startBtn-navbar tareas">
+        <ul class="start-Botones ">
+            <li><button class="startForm-Btn Nuevo"><strong>Pendientes</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Urgentes</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Importantes</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Hay tiempo</strong></button></li>
+        </ul>    
+    </div>                        
+</dialog> 
+
+ <!--ModalMovimientos--> 
+<dialog id="modalMovimientos" class="start-modal scroll">
+    <div class="modalStartContainer">
+        <div class="modalStartClose-Btn">    
+            <button id="closeBtn"  onclick="window.modalMovimientos.close();"><strong>X</strong></button>
+        </div>  
+        <div class="start-Form">            
+            <form action="">
+                <div class="startRow-Form primerRow">
+                    <div class="fechaTareas">
+                        <label for="fecha" class="startRow-label">Fecha</label>           
+                        <input type="date" class="start-input date" name="fecha" required> 
+                    </div>
+                    <div class="selectorUrgente">  
+                        <label><input type="radio" name="tipo" value="urgente" checked>Urgente</label>
+                        <label><input type="radio" name="tipo" value="importante">Importante</label>
+                        <label><input type="radio" name="tipo" value="hayTiempo">Hay tiempo</label>
+                    </div>
+                </div>
+                <div class="startRow-Form agregarRow">
+                    <input type="text" class="start-input" name="nuevaTarea"required placeholder="Nueva Tarea">
+                    <button type="submit" class="agregarTarea" name="agregarTarea">
+                        <i class="fa-solid fa-circle-plus" id="iconoSuma" style="color: #bb2649;"></i>
+                    </button>
+                </div>               
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>
+                    <div class="startRow-Form tareasRow">
+                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
+                        <button type="submit" class="agregarTarea" name="eliminarTarea">
+                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
+                        </button>
+                    </div>                
+            </form>           
+        </div>
+    </div>
+    <!--Estos son los botones comunes a todos los modales-->   
+    <div class="startBtn-navbar tareas">
+        <ul class="start-Botones ">
+            <li><button class="startForm-Btn Nuevo"><strong>Pendientes</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Urgentes</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Importantes</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Hay tiempo</strong></button></li>
+        </ul>    
+    </div>                        
+</dialog> 
  
 <!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
 <footer>
