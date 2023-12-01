@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Invelexa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invelexa: sistema de control de inventario para micropymes y emprendedores">
+    <meta name="keywords" content="Invelexa, inventario, control de inventario, stock, control de stock, micropymes, emprendedor, emprendimient, Roxy-B, RoxyB, Roxy">
+    <meta name="author" content="Roxy B">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--favicon-->
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon.ico">    
+<!--CSS only-->
+    <link rel="stylesheet" href="../assets/CSS/index-styles.css">
+    <link rel="stylesheet" href="../assets/CSS/login-styles.css"> 
+    <link rel="stylesheet" href="../assets/CSS/start-styles.css"> 
+    <link rel="stylesheet" href="../assets/CSS/reportes-styles.css">
+<!--Script de Fontawesome--> 
+<script src="https://kit.fontawesome.com/5a819552f9.js" crossorigin="anonymous"></script>   
+</head>
+
+<body>
+<!--ACÁ EMPIEZA LA CABECERA COMÚN DE TODAS LAS PÁGINAS-->
+<header>
+    <div class="language">  
+        <span id="Contactanos"><a href="./pages/contacto.html"><strong>¿Necesitás ayuda? Contactanos</strong></a></span> 
+        <span class="imagen-bandera"><img src="../assets/img/bandera ES.jpg" alt="selector lenguaje español"  width="38rem"></span>
+    </div>
+<!--barra superior "redes"-->
+    <nav class="flex-top-navbar">
+<!--logo invelexa-->
+        <div class="invelexa-logo">
+            <a href="./start.html"><img src="../assets/img/invelexa-logo color.png" alt="Invelexa Logo" width="300rem"></a>
+        </div>
+<!--botones redes y login-->        
+        <div class="contact-us">
+            <ul class="social-media">                
+                <li class="icons"><a href=""><i class="fa-brands fa-square-facebook logoRedes" style="color: #d4cacd;" alt="link facebook"></i></a></li>
+                <li class="icons"><a href=""><i class="fa-brands fa-linkedin logoRedes" style="color: #d4cacd;" alt="link linkedin"></i></a></li>
+                <li class="icons"><a href=""><i class="fa-brands fa-square-instagram logoRedes" style="color: #d4cacd;" alt="link instagram"></i></a></li>
+                <li class="icons"><a href="./login.html"><button  class="button-slide slide-right" type="button"><strong>Logout</strong></button></a></li>
+            </ul>   
+        </div>
+    </nav>
+</header>
+  
+<section class="banner">
+    <navbar class="verticalNavbar">
+        <ul class="startNavbar">
+            <li class="navItems"><a onclick="window.modalListaStock.showModal();"><strong>Stock</strong></a></li>
+            <li class="navItems"><a onclick="window.modalClienteProveedor.showModal();"><strong>Vencimientos</strong></a></li>
+            <li class="navItems"><a onclick="window.modalListaDeTareas.showModal()"><strong>Clientes</strong></a></li>
+            <li class="navItems"><a onclick="window.modalMovimientos.showModal()"><strong> Proveedores</strong></a></li>
+            <li class="navItems"><a href="../pages/reportes.html" id="startReportes"><strong>Resultados</strong></a></li>
+       </ul>
+    </navbar>
+    <div class="contenidoCentral">
+        <h1>Bienvenido Usuario</h1>
+        <h2><i>"Lo único imposible es aquello que no intentas"</i></h2>
+    </div>
+</section>
+ 
+ 
+<!--ACÁ EMPIEZAN LOS MODALES--> 
+ <!--ModalListaStock--> 
+<dialog id="modalListaStock" class="start-modal ListaStock">
+    <div class="modalStartContainer">
+        <div class="modalStartClose-Btn">    
+            <button class="closeBtn"  onclick="window.modalListaStock.close();"><strong>X</strong></button>
+        </div>   
+        
+    </div>
+    <!--Estos son los botones comunes a todos los modales-->
+    <div class="startBtn-navbar">
+        <ul class="start-Botones ">
+            <li><button class="startForm-Btn Nuevo"><strong>Nuevo</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Modificar</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Guardar</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Eliminar</strong></button></li>
+        </ul>    
+    </div>                        
+</dialog>  
+
+
+
+ 
+
+<!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
+<footer>
+    <div class="author"><cite>- Created by Roxy-B - 2024 -</cite></div>
+
+</footer>
+    
+</body>
+</HTML>
