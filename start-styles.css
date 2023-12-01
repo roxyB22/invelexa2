@@ -1,35 +1,55 @@
 .banner{
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 .startNavbar{
    padding-top: .5rem;
-   padding-left: 3rem;
-   padding-right: 5rem;
+   padding-bottom: .2rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
    list-style: none;
    background-color: #6667ab80; 
-   transition: background-color 0.3s ease;
+   
 }
 .navItems{
-    padding-top: 2.2rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: .35rem;
+    padding-top: 0.34rem;
     color: #fefeff;
     opacity: 1;
     cursor: pointer;
-    
+    text-decoration: none;   
+}
+.startNavbar a{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 5rem;    
+    display: block;
 }
 .startNavbar a:hover{
-        background-color: #a3a4c080;
-        padding: 2rem 1rem;
+    background-color: #a3a4c080; 
+}
+.contenidoCentral{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    text-align: center;
+    color: #d4cacd;
+}
+.contenidoCentral h2{
+    padding-top: 2rem;
+    color: #bb2649;
 }
 /*Acá empiezan los modales*/
 /*estos son los estilos comunes a todos los modales*/
 .start-modal{
     width: 70%;
-    margin: 9.55rem 0 2rem 18.2rem ;
+    margin: 9.6rem 0 2.8rem 18.2rem;
     padding-left: 1rem;
     padding-right: 1rem; 
-    padding-bottom: 0.9rem;   
+    padding-bottom: 1rem;
+      
     border-color: #d4cacd;
     background-color: #d4cacd;
     justify-content: center;
@@ -37,7 +57,7 @@
 .modalStartClose-Btn{
     padding-left: 55rem;   
 }
-#closeBtn{
+.closeBtn{
     margin-top: 0.5rem;
     padding: 0.2rem;
     border-radius: 5px;
@@ -198,12 +218,14 @@
     display: flex; /*esto alinea los div en una misma fila*/
     vertical-align: middle; /*esto alinea los div a la misma altura*/
     padding-top: .3rem;
+    padding-left: 2rem;
+   
 }
-.selectorUrgente{
+.selector{
     padding-top: .6rem;
     padding-left: 10rem;
 }
-.selectorUrgente label{
+.selector label{
     padding-left: 2rem;
 }
 .agregarRow input{
@@ -230,3 +252,42 @@
 .tareas{
     padding-top: 0;
 } 
+/*estos son los estilos del modal Movimientos*/
+#compraVenta{
+    padding-left: 23rem;
+}
+.fechaMoviemiento{
+    padding-left: 1rem;
+}
+.fechaMovimiento input{
+    margin-left: 2rem
+}
+.movimiento{
+    margin-left: 1.5rem;
+}
+#nombreProducto-label{
+    margin-right: 1.4rem;
+}
+#movimientoDescripcion-input{
+    margin-left: 0;
+}
+#movimientoVencimiento-input{
+margin-left: 0;
+}
+#movimientoCantidad-input{
+    margin-left: 1.5rem;
+}
+.unitario{
+    margin-left: 2rem;
+}
+#movimientoCodigo-label{
+    margin-left: 1.8rem;
+}
+.movimientoBtn{
+    margin-top: 2.15rem;
+}
+/*estos son los estilos del item Reportes*/
+#startReportes{
+    text-decoration: none;
+    color: #fefeff;
+}

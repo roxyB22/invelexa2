@@ -22,22 +22,23 @@
 <body>
 <!--ACÁ EMPIEZA LA CABECERA COMÚN DE TODAS LAS PÁGINAS-->
 <header>
-    <div class="language">   
-        <span><img src="../assets/img/bandera ES.jpg" alt="selector lenguaje español"  width="38rem"></span>
+    <div class="language">  
+        <span id="Contactanos"><a href="./pages/contacto.html"><strong>¿Necesitás ayuda? Contactanos</strong></a></span> 
+        <span class="imagen-bandera"><img src="../assets/img/bandera ES.jpg" alt="selector lenguaje español"  width="38rem"></span>
     </div>
 <!--barra superior "redes"-->
     <nav class="flex-top-navbar">
 <!--logo invelexa-->
         <div class="invelexa-logo">
-            <a href="../index.html"><img src="../assets/img/invelexa-logo color.png" alt="Invelexa Logo" width="300rem"></a>
+            <a href="./login.html"><img src="../assets/img/invelexa-logo color.png" alt="Invelexa Logo" width="300rem"></a>
         </div>
 <!--botones redes y login-->        
         <div class="contact-us">
             <ul class="social-media">                
-                <li class="icons"><a href=""><img src="../assets/img/facebook logo.png" alt="link facebook"    width="50rem"></a></li>
-                <li class="icons"><a href=""><img src="../assets/img/linkedin logo.png" alt="link linkedin" width="50rem"></a></li>
-                <li class="icons"><a href=""><img src="../assets/img/instagram.png" alt="link instagram" width="50rem"></a></li>
-                <li class="icons"><a href="./login.html"><button  class="button-slide slide-right" type="button"><strong>Login</strong></button></a></li>
+                <li class="icons"><a href=""><i class="fa-brands fa-square-facebook logoRedes" style="color: #d4cacd;" alt="link facebook"></i></a></li>
+                <li class="icons"><a href=""><i class="fa-brands fa-linkedin logoRedes" style="color: #d4cacd;" alt="link linkedin"></i></a></li>
+                <li class="icons"><a href=""><i class="fa-brands fa-square-instagram logoRedes" style="color: #d4cacd;" alt="link instagram"></i></a></li>
+                <li class="icons"><a href="./login.html"><button  class="button-slide slide-right" type="button"><strong>Logout</strong></button></a></li>
             </ul>   
         </div>
     </nav>
@@ -50,12 +51,13 @@
             <li class="navItems"><a onclick="window.modalClienteProveedor.showModal();"><strong>Clientes/Proveedores</strong></a></li>
             <li class="navItems"><a onclick="window.modalListaDeTareas.showModal()"><strong>Lista de Tareas</strong></a></li>
             <li class="navItems"><a onclick="window.modalMovimientos.showModal()"><strong> Movimientos</strong></a></li>
-            <li class="navItems"><strong>Reportes</strong></li>
+            <li class="navItems"><a href="../pages/reportes.html" id="startReportes"><strong>Reportes</strong></a></li>
        </ul>
     </navbar>
     <div class="contenidoCentral">
+        <h1>Bienvenido Usuario</h1>
+        <h2><i>"Lo único imposible es aquello que no intentas"</i></h2>
 
-<!--ACÁ podría poner una frase motivadora-->
     </div>
 </section>
  
@@ -65,7 +67,7 @@
 <dialog id="modalProducto" class="start-modal">
     <div class="modalStartContainer">
         <div class="modalStartClose-Btn">    
-            <button id="closeBtn"  onclick="window.modalProducto.close();"><strong>X</strong></button>
+            <button class="closeBtn"  onclick="window.modalProducto.close();"><strong>X</strong></button>
         </div>   
         <div class="seeker">
                 <input type="text" class="seekerTextBox" placeholder="Nombre o código de barras...">
@@ -119,7 +121,7 @@
 <dialog id="modalClienteProveedor" class="start-modal">
     <div class="modalStartContainer">
         <div class="modalStartClose-Btn">    
-            <button id="closeBtn"  onclick="window.modalClienteProveedor.close();"><strong>X</strong></button>
+            <button class="closeBtn"  onclick="window.modalClienteProveedor.close();"><strong>X</strong></button>
         </div>   
         <div class="seeker">
                 <input type="text" class="seekerTextBox" placeholder="Nombre o código de barras...">
@@ -175,16 +177,16 @@
 <dialog id="modalListaDeTareas" class="start-modal scroll">
     <div class="modalStartContainer">
         <div class="modalStartClose-Btn">    
-            <button id="closeBtn"  onclick="window.modalListaDeTareas.close();"><strong>X</strong></button>
+            <button class="closeBtn"  onclick="window.modalListaDeTareas.close();"><strong>X</strong></button>
         </div>  
         <div class="start-Form">            
             <form action="">
                 <div class="startRow-Form primerRow">
-                    <div class="fechaTareas">
+                    <div>
                         <label for="fecha" class="startRow-label">Fecha</label>           
                         <input type="date" class="start-input date" name="fecha" required> 
                     </div>
-                    <div class="selectorUrgente">  
+                    <div class="selector">  
                         <label><input type="radio" name="tipo" value="urgente" checked>Urgente</label>
                         <label><input type="radio" name="tipo" value="importante">Importante</label>
                         <label><input type="radio" name="tipo" value="hayTiempo">Hay tiempo</label>
@@ -244,71 +246,58 @@
 <dialog id="modalMovimientos" class="start-modal scroll">
     <div class="modalStartContainer">
         <div class="modalStartClose-Btn">    
-            <button id="closeBtn"  onclick="window.modalMovimientos.close();"><strong>X</strong></button>
+            <button class="closeBtn"  onclick="window.modalMovimientos.close();"><strong>X</strong></button>
         </div>  
-        <div class="start-Form">            
-            <form action="">
-                <div class="startRow-Form primerRow">
-                    <div class="fechaTareas">
-                        <label for="fecha" class="startRow-label">Fecha</label>           
-                        <input type="date" class="start-input date" name="fecha" required> 
-                    </div>
-                    <div class="selectorUrgente">  
-                        <label><input type="radio" name="tipo" value="urgente" checked>Urgente</label>
-                        <label><input type="radio" name="tipo" value="importante">Importante</label>
-                        <label><input type="radio" name="tipo" value="hayTiempo">Hay tiempo</label>
-                    </div>
+        <form action="">
+            <div class="startRow-Form primerRow">
+                <div class="fechaMovimiento">
+                    <label for="fecha" class="startRow-label">Fecha</label>           
+                    <input type="date" class="start-input date" name="fecha" required> 
                 </div>
-                <div class="startRow-Form agregarRow">
-                    <input type="text" class="start-input" name="nuevaTarea"required placeholder="Nueva Tarea">
-                    <button type="submit" class="agregarTarea" name="agregarTarea">
-                        <i class="fa-solid fa-circle-plus" id="iconoSuma" style="color: #bb2649;"></i>
-                    </button>
-                </div>               
-                    <div class="startRow-Form tareasRow">
-                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
-                        <button type="submit" class="agregarTarea" name="eliminarTarea">
-                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
-                        </button>
-                    </div>
-                    <div class="startRow-Form tareasRow">
-                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
-                        <button type="submit" class="agregarTarea" name="eliminarTarea">
-                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
-                        </button>
-                    </div>
-                    <div class="startRow-Form tareasRow">
-                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
-                        <button type="submit" class="agregarTarea" name="eliminarTarea">
-                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
-                        </button>
-                    </div>
-                    <div class="startRow-Form tareasRow">
-                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
-                        <button type="submit" class="agregarTarea" name="eliminarTarea">
-                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
-                        </button>
-                    </div>
-                    <div class="startRow-Form tareasRow">
-                        <input type="text" class="start-input" name="eliminarTarea"required placeholder="Tarea Agendada">
-                        <button type="submit" class="agregarTarea" name="eliminarTarea">
-                            <i class="fa-solid fa-circle-minus" style="color: #bb2649;"></i>
-                        </button>
-                    </div>                
-            </form>           
-        </div>
+                <div class="selector">  
+                    <label><input type="radio" name="tipo" value="compra" checked>Compra</label>
+                    <label><input type="radio" name="tipo" value="venta">Venta</label>
+                    
+                </div>
+            </div>
+            <div class="startRow-Form movimiento">
+                <label for="nombreProducto" id="nombreProducto-label">Nombre</label>           
+                <input type="text" class="start-input" name="nombreProducto" required placeholder="Nombre del Producto">
+            </div>
+            <div class="startRow-Form movimiento">
+                <label for="descripcion" class="startRow-label" >Descripción</label>           
+                <input class="start-input descripcion" id="movimientoDescripcion-input"name="descripcion" required></input>
+            </div>
+            <div class="startRow-Form movimiento">
+                <label for="vencimiento" class="startRow-label">Vencimiento</label>           
+                <input type="date" class="start-input date" id="movimientoVencimiento-input" name="vencimiento" required>
+                <label for="codBarras" class="startRow-label codigo-label" id="movimientoCodigo-label">Cod.Barras</label>           
+                <input type="text" class="start-input codigo-input" name="codBarras" required>       
+                <label for="Sku" id="sku-label">SKU</label>           
+                <input type="text" class="start-input sku-input" name="sku" >
+            </div>
+            <div class="startRow-Form movimiento">
+                <label for="cantidad" class="startRow-label">Cantidad</label>           
+                <input type="number" class="start-input number" id="movimientoCantidad-input" name="cantidad" required>
+                <label for="precio" class="startRow-label precio unitario" >Precio Unitario $</label>           
+                <input type="text" class="start-input number unitario" name="precio" required>
+                <label for="precio" class="startRow-label precio unitario">Precio Total $</label>           
+                <input type="text" class="start-input number" name="precio" required>
+            </div>
     </div>
     <!--Estos son los botones comunes a todos los modales-->   
     <div class="startBtn-navbar tareas">
-        <ul class="start-Botones ">
-            <li><button class="startForm-Btn Nuevo"><strong>Pendientes</strong></button></li>
-            <li><button class="startForm-Btn"><strong>Urgentes</strong></button></li>
-            <li><button class="startForm-Btn"><strong>Importantes</strong></button></li>
-            <li><button class="startForm-Btn"><strong>Hay tiempo</strong></button></li>
+        <ul class="start-Botones movimientoBtn">
+            <li><button class="startForm-Btn Nuevo"><strong>Nuevo</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Modificar</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Guardar</strong></button></li>
+            <li><button class="startForm-Btn"><strong>Eliminar</strong></button></li>
         </ul>    
     </div>                        
 </dialog> 
+        
  
+
 <!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
 <footer>
     <div class="author"><cite>- Created by Roxy-B - 2024 -</cite></div>

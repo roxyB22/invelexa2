@@ -13,7 +13,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon.ico">    
 <!--CSS only-->
     <link rel="stylesheet" href="../assets/CSS/index-styles.css">
-    <link rel="stylesheet" href="../assets/CSS/login-styles.css"> 
+    <link rel="stylesheet" href="../assets/CSS/login-styles.css">
+    
     <!--Script de Fontawesome--> 
 <script src="https://kit.fontawesome.com/5a819552f9.js" crossorigin="anonymous"></script>      
 </head>
@@ -21,8 +22,9 @@
 <body>
 <!--ACÁ EMPIEZA LA CABECERA COMÚN DE TODAS LAS PÁGINAS-->
 <header>
-    <div class="language">   
-        <span><img src="../assets/img/bandera ES.jpg" alt="selector lenguaje español"  width="38rem"></span>
+    <div class="language">  
+        <span id="Contactanos"><a href="./pages/contacto.html"><strong>¿Necesitás ayuda? Contactanos</strong></a></span> 
+        <span class="imagen-bandera"><img src="../assets/img/bandera ES.jpg" alt="selector lenguaje español"  width="38rem"></span>
     </div>
 <!--barra superior "redes"-->
     <nav class="flex-top-navbar">
@@ -33,11 +35,11 @@
 <!--botones redes y login-->        
         <div class="contact-us">
             <ul class="social-media">                
-                <li class="icons"><a href=""><img src="../assets/img/facebook logo.png" alt="link facebook"    width="50rem"></a></li>
-                <li class="icons"><a href=""><img src="../assets/img/linkedin logo.png" alt="link linkedin" width="50rem"></a></li>
-                <li class="icons"><a href=""><img src="../assets/img/instagram.png" alt="link instagram" width="50rem"></a></li>
-                <li class="icons"><a href="./login.html"><button  class="button-slide slide-right" type="button"><strong>Login</strong></button></a></li>
-            </ul>   
+                <li class="icons"><a href=""><i class="fa-brands fa-square-facebook logoRedes" style="color: #d4cacd;" alt="link facebook"></i></a></li>
+                <li class="icons"><a href=""><i class="fa-brands fa-linkedin logoRedes" style="color: #d4cacd;" alt="link linkedin"></i></a></li>
+                <li class="icons"><a href=""><i class="fa-brands fa-square-instagram logoRedes" style="color: #d4cacd;" alt="link instagram"></i></a></li>
+                <li class="icons"><a href="../pages/start.html"><button  class="button-slide slide-right" type="button"><strong>Login</strong></button></a></li>
+            </ul>  
         </div>
     </nav>
 </header>
@@ -63,42 +65,70 @@
             <ul class="registrer-list">
     <!--acá falta colocar los links de <a> para los formularios de registro y olvidé la contraseña-->
                 <li class="registrer-text"><a onclick="window.modalContrasenia.showModal();"><h4><i>Olvidé mi contraseña</i></h4></a></li>
-                <li class="registrer-text"><a onclick="window.modalRegistrarme.showModal()"><h4><i>Registrarme</i></h4></a></li>
+                <li class="registrer-text"><a onclick="window.modalRegistrarme.showModal();"><h4><i>Registrarme</i></h4></a></li>
             </ul>
         </div>
     </div>
 </section>
  
-<!--ACÁ EMPIEZAN LOS MODALES-->  
-<dialog id="modalContrasenia">
-    <div class="modalContraseniaContainer">
-        <h3>¿Olvidaste tu Contraseña?</h3>
-        <h4>Ingresá el e-mail con el que te registraste y luego presioná el botón "Enviar". Se generará una nueva contraseña que será enviada al mail ingresado.</h4>
-        <form action="">            
-            <input type="text" class="login-input" name="usuario" required>
-            <label for="email" id="email-label"></label>
-            <button class="modalContraseniaClose-Btn">Enviar</button>
-        </form>
-        <div class="modalContraseniaClose-Btn">    
+<!--ACÁ EMPIEZAN LOS MODALES--> 
+
+ <!--Modal Contraseña--> 
+<dialog id="modalContrasenia" class="login-modal">
+    <div class="modalLoginContainer">
+        <div class="modalLoginClose-Btn">    
             <button onclick="window.modalContrasenia.close();"><strong>X</strong></button>
-        </div>               
+        </div>
+        <div class="modalLoginTextos">
+            <h3>¿Olvidaste tu Contraseña?</h3>
+            <h4><i>Ingresá el e-mail con el que te registraste y luego presioná el botón "Enviar"</i></h4>
+            <h4> Se generará una nueva contraseña que será enviada al mail ingresado.</h4>
+        </div>
+    <form class="login-form" action="">            
+            <input type="text" class="login-input" name="usuario" required placeholder="Email">
+            <br>
+            <button class="modalContraseniaClose-Btn"><strong>Enviar</strong></button>
+        </form>
+                       
     </div>  
 </dialog>  
 
-<dialog id="modalRegistrarme">
+<!--Modal Registrarme--> 
+<dialog id="modalRegistrarme" class="login-modal">
     <div class="modalRegistrarmeContainer">
-        <h3>¿Olvidaste tu Contraseña?</h3>
-        <h4>Ingresá el e-mail con el que te registraste y luego presioná el botón "Enviar". Se generará una nueva contraseña que será enviada al mail ingresado.</h4>
-        <form action="">            
-            <input type="text" class="login-input" name="usuario" required>
-            <label for="email" id="email-label"></label>
-            <button class="modalContraseniaClose-Btn">Enviar</button>
+        <div class="modalLoginClose-Btn" id="registrarmeBoton">    
+            <button  onclick="window.modalRegistrarme.close();"><strong>X</strong></button>
+        </div>
+        <div class="modalLoginTextos" id="registrarmeTextos">
+            <h3>Registrate</h3>
+            <h4><i>Ingresá el e-mail con el que te registraste y luego presioná el botón "Enviar"</i></h4>
+            <h4> Se generará una nueva contraseña que será enviada al mail ingresado.</h4>
+        </div>
+        <form class="login-form" id="registrarme-form" action="">         
+            <div class="registrarmeRow-Form">
+                <label for="nombreRegistrarme" id="nombreRegistrarme-label">Nombre</label>           
+                <input type="text" class="login-input" name="nombreRegistrarme" required placeholder="Nombre completo o Usuario">                
+            </div>
+            <div class="registrarmeRow-Form">
+                <label for="empresa" class="startRow-label">Empresa</label>           
+                <input type="text" class="login-input" name="empresa" placeholder="Empresa/Unipersonal">                
+            </div>            
+            <div class="registrarmeRow-Form">
+                <label for="emailRegistrarme" class="startRow-label">Email</label>           
+                <input type="email" class="login-input" id="registrarmeEmail" name="emailRegistrarme"required placeholder="Email">              
+            </div>
+            <div class="registrarmeRow-Form">
+                <label for="contraseniaRegistrarme" class="startRow-label">Contraseña</label>   
+                <input type="password" class="login-input" id="registrarmePassword" name="contraseniaRegistrarme" required placeholder="Contraseña">
+            <div class="registrarmeRow-Form">
+                <button class="modalContraseniaClose-Btn"><strong>Enviar</strong></button>
+            </div>
+            </div>
         </form>
-        <div class="modalContraseniaClose-Btn">    
-            <button onclick="window.modalRegistrarme.close();"><strong>X</strong></button>
-        </div>               
     </div>  
 </dialog> 
+
+
  
  
     <!--ACÁ EMPIEZA EL FOOTER QUE ES COMÚN A TODAS LAS PÁGINAS-->   
